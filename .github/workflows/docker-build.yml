@@ -59,6 +59,9 @@ jobs:
           DOCKER_USER: ${{ secrets.DOCKERHUB_USERNAME }}
           DOCKER_PASS: ${{ secrets.DOCKERHUB_TOKEN }}
         with:
-          destination_container_repo: ${{ env.DOCKER_USER }}/${{ env.IMAGE_NAME }}
+          destination_container_repo: ${{ secrets.DOCKERHUB_USERNAME }}/scrapegraphai
           provider: dockerhub
           readme_file: "README.md"
+
+      - name: Logout from Docker registry
+        run: docker logout docker.io
