@@ -1,0 +1,28 @@
+# Exclude Python caches and virtual environments
+__pycache__/
+*.py[cod]
+venv/
+.env
+
+# Node modules (if present)
+node_modules/
+
+# Git metadata
+.git/
+.gitignore
+
+# CI, logs, docs, and test files
+.github/
+.gitlab-ci.yml
+.github-workflows/
+*.log
+tests/
+docs/
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# Dockerfile and ignores (automatically included, but safe to list)
+Dockerfile
+.dockerignore
